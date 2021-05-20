@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 import WebKit
 
-protocol RateViewDelegate {
+public protocol RateViewDelegate: class {
     func closeButtonPressed()
 }
 
 
-open class JDRateViewController:UIViewController{
+public class RateViewController:UIViewController{
     lazy var webView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()
         let webView = WKWebView(frame: CGRect.zero, configuration: webConfiguration)
@@ -23,7 +23,7 @@ open class JDRateViewController:UIViewController{
         return webView
     }()
     var activityIndicatorView: UIActivityIndicatorView!
-    var delegate: RateViewDelegate? = nil
+    public var delegate: RateViewDelegate?
     
     
     // MARK: - Constructor
@@ -40,17 +40,18 @@ open class JDRateViewController:UIViewController{
         self.navigationController?.navigationBar.isHidden = true
         self.view.addSubview(webView)
         self.view.backgroundColor = UIColor.white
-        NSLayoutConstraint.activate([
-            webView.topAnchor
-                .constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            webView.leftAnchor
-                .constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor),
-            webView.bottomAnchor
-                .constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-            webView.rightAnchor
-                .constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor)
-        ])
-        
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                webView.topAnchor
+                    .constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+                webView.leftAnchor
+                    .constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor),
+                webView.bottomAnchor
+                    .constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+                webView.rightAnchor
+                    .constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor)
+            ])
+        }
         
         let myURL = URL(string: "https://www.usersnapdemo.com/mobile/view/index.php?email=klaus@schremser.com")
         let myRequest = URLRequest(url: myURL!)
@@ -66,7 +67,9 @@ open class JDRateViewController:UIViewController{
         self.activityIndicatorView.frame = CGRect(x: self.view.frame.width/2 - 25, y: self.view.frame.height/2 - 25, width: 50, height: 50)
         var topPadding:CGFloat = 0.0
         if  let window = UIApplication.shared.keyWindow{
-            topPadding = window.safeAreaInsets.top
+            if #available(iOS 11.0, *) {
+                topPadding = window.safeAreaInsets.top
+            }
         }
         let btnClose = UIButton(frame: CGRect(x: self.view.frame.width - 44, y: 10 + topPadding, width: 34, height: 34))
         btnClose.layer.cornerRadius = 17
@@ -87,7 +90,7 @@ open class JDRateViewController:UIViewController{
     }
 }
 
-extension JDRateViewController:WKNavigationDelegate{
+extension RateViewController:WKNavigationDelegate{
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.activityIndicatorView.stopAnimating()
     }
