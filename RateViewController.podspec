@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -104,7 +104,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
+  spec.resources = "RateViewController/Resources/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
