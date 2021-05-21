@@ -9,7 +9,7 @@ Installation with CocoaPods:
 
 Usage:
 
-var objRateView = RateViewController() \n
+var objRateView = RateViewController()
 objRateView?.delegate = self \n
 objRateView?.modalPresentationStyle = .overFullScreen \n
 self.present(objRateView ?? UIViewController(), animated: true, completion: nil)
