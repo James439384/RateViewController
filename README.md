@@ -9,9 +9,9 @@ Installation with CocoaPods:
 
 Usage:
 
-var objRateView = RateViewController()
-objRateView?.delegate = self
-objRateView?.modalPresentationStyle = .overFullScreen
+var objRateView = RateViewController() \n
+objRateView?.delegate = self \n
+objRateView?.modalPresentationStyle = .overFullScreen \n
 self.present(objRateView ?? UIViewController(), animated: true, completion: nil)
 
 You can write this code on a button action to open rate view when clicked on a button.
