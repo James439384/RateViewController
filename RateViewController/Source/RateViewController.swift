@@ -71,11 +71,21 @@ public class RateViewController:UIViewController{
                 topPadding = window.safeAreaInsets.top
             }
         }
+        var bundle = Bundle(for: RateViewController.self)
+        
+        if let resourcePath = bundle.path(forResource: "RateViewController", ofType: "bundle") {
+            if let resourcesBundle = Bundle(path: resourcePath) {
+                bundle = resourcesBundle
+            }
+        }
+        
+        let imageClose = UIImage(named: "icn_close", in: bundle, compatibleWith: nil)
+        
         let btnClose = UIButton(frame: CGRect(x: self.view.frame.width - 44, y: 10 + topPadding, width: 34, height: 34))
         btnClose.layer.cornerRadius = 17
         btnClose.layer.masksToBounds = true
         btnClose.backgroundColor = UIColor.white
-        btnClose.setImage(UIImage(named: "icn_close"), for: .normal)
+        btnClose.setImage(imageClose, for: .normal)
         btnClose.addTarget(self, action: #selector(closePressed), for: .touchUpInside)
         self.view.addSubview(btnClose)
         self.view.bringSubviewToFront(btnClose)
